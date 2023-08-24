@@ -1,17 +1,73 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        task();
+    }
+    public static void task() {
+        System.out.println("Задание 1");
+        // Массив №1.
+        int [] numbers1 = new int[3];
+        numbers1[0] = 1;
+        numbers1[1] = 2;
+        numbers1[2] = 3;
+        // Массив №2.
+        double [] numbers2 = {1.57, 7.654, 9.986};
+        // Массив №3.
+        int [] applesInBox = {13, 14, 12, 18, 22};
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
-
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+        System.out.println("Задание 2");
+        for (int i = 0; i < numbers1.length; i++) {
+            if (i == numbers1.length - 1) {
+                System.out.println(numbers1[i]);
+                break;
+            }
+            System.out.print(numbers1[i] + ", ");
         }
+        for (int i = 0; i < numbers2.length; i++) {
+            if (i == numbers2.length - 1) {
+                System.out.println(numbers2[i]);
+                break;
+            }
+            System.out.print(numbers2[i] + ", ");
+        }
+        for (int i = 0; i < applesInBox.length; i++) {
+            if (i == applesInBox.length - 1) {
+                System.out.println(applesInBox[i]);
+                break;
+            }
+            System.out.print(applesInBox[i] + ", ");
+        }
+
+        System.out.println("Задание 3");
+        for (int i = numbers1.length - 1; i >= 0; i--) {
+            if (i == 0) {
+                System.out.println(numbers1[i]);
+                break;
+            }
+            System.out.print(numbers1[i] + ", ");
+        }
+        for (int i = (numbers2.length - 1); i >= 0 ; i--) {
+            if (i == 0) {
+                System.out.println(numbers2[i]);
+                break;
+            }
+            System.out.print(numbers2[i] + ", ");
+        }
+        for (int i = (applesInBox.length - 1); i >= 0; i--) {
+            if (i == 0) {
+                System.out.println(applesInBox[i]);
+                break;
+            }
+            System.out.print(applesInBox[i] + ", ");
+        }
+
+        System.out.println("Задание 4");
+        for (int i = 0; i < numbers1.length; i++) {
+            if (numbers1[i] % 2 == 1) {
+                numbers1[i]++;
+            }
+        }
+        System.out.println(Arrays.toString(numbers1));
     }
 }
